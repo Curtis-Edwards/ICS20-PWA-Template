@@ -3,17 +3,19 @@
 // This file contains the JS functions for index.html
 
 'use strict'
-/**
- * This function calculates area of a circle.
- */
-function calculate () {
-  // input
-  const radius = parseInt(document.getElementById('radius').value)
-  const pi = Math.PI;
-  // process
-  
-  const area = ( pi * radius  ) *  radius
 
-  // output
-  document.getElementById('area').innerHTML = 'Area is: ' + area.toFixed(2) + ' cm²'
+/**
+ * Check servie worker.
+ */
+ if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
+    scope: "/ICS2O-PWA-Test/",
+  })
+}
+
+/**
+ * This function displays an alert.
+ */
+function myButtonClicked() {
+  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
 }
