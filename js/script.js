@@ -5,7 +5,7 @@
 'use strict'
 
 /**
- * Check servie worker.
+ * Check service worker.
  */
  if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS20-PWA-Template/sw.js", {
@@ -14,6 +14,6 @@
 }
 
 /**
- * This function displays an xxx.
+ * Input.
  */
 
